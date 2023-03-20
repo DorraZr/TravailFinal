@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20230319 18:56:02.913" rpa="false" schemaversion="3">
+<suite id="s1" name="Exigence6" source="c:\Users\zrigu\Downloads\TpFinal (1)\TpFinal\Scripts\Exigence6.robot">
+<test id="s1-t1" name="Test recherche des articles" line="24">
+<kw name="Ouvrir navigateur" library="keywords">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230319 18:56:03.196" level="INFO">Opening browser 'chrome' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
+<status status="PASS" starttime="20230319 18:56:03.196" endtime="20230319 18:56:06.801"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230319 18:56:06.802" endtime="20230319 18:56:06.923"/>
+</kw>
+<status status="PASS" starttime="20230319 18:56:03.195" endtime="20230319 18:56:06.923"/>
+</kw>
+<kw name="Recherche article" library="keywords">
+<arg>samsung</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 18:56:06.925" endtime="20230319 18:56:06.948"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_search}</arg>
+<arg>${article}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230319 18:56:06.949" level="INFO">Typing text 'samsung' into text field '//input[@name='search' and @placeholder='Search']'.</msg>
+<status status="PASS" starttime="20230319 18:56:06.949" endtime="20230319 18:56:07.025"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_search}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230319 18:56:07.026" level="INFO">Clicking button '//span/button[@type='button']'.</msg>
+<status status="PASS" starttime="20230319 18:56:07.026" endtime="20230319 18:56:07.614"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Products meeting the search criteria</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230319 18:56:07.628" level="INFO">Current page contains text 'Products meeting the search criteria'.</msg>
+<status status="PASS" starttime="20230319 18:56:07.615" endtime="20230319 18:56:07.628"/>
+</kw>
+<status status="PASS" starttime="20230319 18:56:06.924" endtime="20230319 18:56:07.628"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230319 18:56:07.628" endtime="20230319 18:56:09.718"/>
+</kw>
+<status status="PASS" starttime="20230319 18:56:03.194" endtime="20230319 18:56:09.719"/>
+</test>
+<doc>Fichiers de scripts pour le Travail final Ecommerce.</doc>
+<status status="PASS" starttime="20230319 18:56:02.917" endtime="20230319 18:56:09.722"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exigence6">Exigence6</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
